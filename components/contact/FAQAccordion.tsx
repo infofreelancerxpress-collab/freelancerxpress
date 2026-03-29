@@ -1,0 +1,42 @@
+"use client";
+
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import { faqItems } from "@/data/faq";
+import { SectionHeading } from "@/components/shared/SectionHeading";
+
+export function FAQAccordion() {
+  return (
+    <section className="py-20 md:py-32 bg-muted/30">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <SectionHeading
+          title="Frequently Asked Questions"
+          subtitle="Find answers to common questions about our services"
+        />
+
+        <div className="max-w-3xl mx-auto">
+          <Accordion type="single" collapsible className="space-y-4">
+            {faqItems.map((item) => (
+              <AccordionItem
+                key={item.id}
+                value={item.id}
+                className="bg-card rounded-lg px-6 border"
+              >
+                <AccordionTrigger className="text-left hover:no-underline">
+                  <span className="font-semibold">{item.question}</span>
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground">
+                  {item.answer}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
+      </div>
+    </section>
+  );
+}
