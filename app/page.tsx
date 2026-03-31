@@ -2,9 +2,9 @@ import { HeroSection } from "@/components/home/HeroSection";
 import { ServicesOverview } from "@/components/home/ServicesOverview";
 import { WhyChooseUs } from "@/components/home/WhyChooseUs";
 import { StatsSection } from "@/components/home/StatsSection";
-import { TestimonialsCarousel } from "@/components/home/TestimonialsCarousel";
 import { CTASection } from "@/components/home/CTASection";
 import { OfferPopup } from "@/components/home/OfferPopup";
+import { TestimonialsCarousel } from "@/components/home/TestimonialsCarousel";
 
 export default function Home() {
   return (
@@ -13,7 +13,7 @@ export default function Home() {
       <ServicesOverview />
       <WhyChooseUs />
       <StatsSection />
-      <TestimonialsCarousel />
+     <TestimonialsCarousel />
       <CTASection />
       <OfferPopup />
     </>
