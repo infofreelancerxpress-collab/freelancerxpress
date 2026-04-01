@@ -38,8 +38,33 @@ export function OfferPopup() {
   useEffect(() => {
     const fetchOffer = async () => {
       try {
-        const hasSeenOffer = localStorage.getItem("hasSeenOffer");
-        if (hasSeenOffer) {
+        // Already shown this session — don't show again
+        const shownThisSession = sessionStorage.getItem("offerShownThisSession");
+        if (shownThisSession) {
+          setLoading(false);
+          return;
+        }
+
+        // Track visit count (incremented once per session)
+        const isNewSession = !sessionStorage.getItem("sessionCounted");
+        let visitCount = parseInt(localStorage.getItem("visitCount") || "0", 10);
+        if (isNewSession) {
+          visitCount += 1;
+          localStorage.setItem("visitCount", visitCount.toString());
+          sessionStorage.setItem("sessionCounted", "true");
+        }
+
+        // Determine whether to show the offer based on visit count.
+        // 1st visit: always show (100%)
+        // 2nd visit: 30%
+        // 3rd visit: 40%  ...  8th+ visit: 100%
+        // Formula: probability = min(1, 0.3 + (visitCount - 2) * 0.1) for visits > 1
+        let showProbability = 1;
+        if (visitCount > 1) {
+          showProbability = Math.min(1, 0.3 + (visitCount - 2) * 0.1);
+        }
+
+        if (Math.random() > showProbability) {
           setLoading(false);
           return;
         }
@@ -64,7 +89,8 @@ export function OfferPopup() {
 
   const handleClose = () => {
     setIsOpen(false);
-    localStorage.setItem("hasSeenOffer", "true");
+    // Mark as shown for this session so it won't appear again this visit
+    sessionStorage.setItem("offerShownThisSession", "true");
   };
 
   if (loading || !offer) return null;
