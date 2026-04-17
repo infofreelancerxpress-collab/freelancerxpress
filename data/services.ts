@@ -123,8 +123,21 @@ export const services: Service[] = [
   ],
   longDescription:
     "Take full control of your data with server-side tracking solutions. We implement reliable analytics and conversion tracking that improves performance, ensures data accuracy, and respects user privacy."
+},
+{
+  id: "video-editing",
+  title: "Video Editing",
+  description: "Professional video editing services to create engaging and tailored content for your audience.",
+  icon: "Film",
+  features: [
+    "Short-form Video Content (Reels, TikTok)",
+    "YouTube Video Editing",
+    "Color Grading & Correction",
+    "Motion Graphics & Effects",
+    "Audio Mixing & Sound Design"
+  ],
+  longDescription: "Transform your raw footage into captivating visual stories. Our professional video editing services help you create high-quality content that drives engagement and communicates your message effectively across all platforms."
 }
-
 ];
 
 export const getServiceById = (id: string): Service | undefined => {

@@ -16,6 +16,7 @@ const services = [
   { title: 'Banner Design', description: 'Eye-catching banner designs for web, social media, and advertising campaigns.' },
   { title: 'SEO', description: 'Improve your search engine rankings and drive organic traffic with proven SEO strategies.' },
   { title: 'Server-Side Tracking', description: 'Accurate, privacy-friendly tracking using server-side analytics and event measurement.' },
+  { title: 'Video Editing', description: 'Professional video editing services to create engaging and tailored content for your audience.' },
 ];
 
 async function main() {

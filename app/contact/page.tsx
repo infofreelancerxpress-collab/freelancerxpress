@@ -40,8 +40,8 @@ function ContactHero() {
         <div className="max-w-3xl mx-auto text-center space-y-6">
           <h1 className="font-heading font-bold text-white">Get In Touch</h1>
           <p className="text-xl md:text-2xl text-white/90 max-w-2xl mx-auto">
-            Ready to transform your digital presence? We'd love to hear from
-            you. Let's start a conversation.
+            Ready to transform your digital presence? We&apos;d love to hear from
+            you. Let&apos;s start a conversation.
           </p>
         </div>
       </div>
@@ -59,8 +59,8 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Call Us",
-    content: "+880 1577-164844",
-    href: "tel:+8801577164844",
+    content: "+8801996538146",
+    href: "tel:+8801996538146",
   },
   {
     icon: Mail,

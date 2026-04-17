@@ -29,6 +29,7 @@ const services = [
   { name: "Logo Design", href: "/services#graphics-logo-design" },
   { name: "Email Marketing", href: "/services#email-marketing" },
   { name: "Social Media", href: "/services#social-media-marketing" },
+  { name: "Video Editing", href: "/services#video-editing" },
 ];
 
 const socialLinks = [
@@ -120,12 +121,12 @@ export function Footer() {
               </div>
               <div className="flex items-center space-x-2">
                 <a
-                  href="tel:+8809649264385"
+                  href="tel:+8801996538146"
                   target="_blank"
                   className="flex items-center gap-2 text-sm font-medium hover:text-primary transition cursor-pointer"
                 >
                   <Phone className="h-4 w-4" />
-                  09649-264385
+                  +8801996538146
                 </a>
               </div>
               <div className="flex items-center space-x-2">
