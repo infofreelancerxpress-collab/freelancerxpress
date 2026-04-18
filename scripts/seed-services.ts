@@ -17,6 +17,7 @@ const services = [
   { title: 'SEO', description: 'Improve your search engine rankings and drive organic traffic with proven SEO strategies.' },
   { title: 'Server-Side Tracking', description: 'Accurate, privacy-friendly tracking using server-side analytics and event measurement.' },
   { title: 'Video Editing', description: 'Professional video editing services to create engaging and tailored content for your audience.' },
+  { title: 'Photographs', description: 'Professional photography services to capture your moments and brand perfectly.' },
 ];
 
 async function main() {

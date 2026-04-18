@@ -16,6 +16,7 @@ const serviceOptions = [
   "Social Media Marketing",
   "Banner Design",
   "Video Editing",
+  "Photographs",
   "Other",
 ];
 

@@ -33,6 +33,10 @@ const services = [
     time: "3 to 7 working days (depending on complexity)",
   },
   {
+    name: "Photographs",
+    time: "1 to 5 working days (depending on requirements)",
+  },
+  {
     name: "Other Digital Services",
     time: "1 to 7 working days",
   },

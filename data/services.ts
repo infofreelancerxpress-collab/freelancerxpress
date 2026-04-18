@@ -137,10 +137,23 @@ export const services: Service[] = [
     "Audio Mixing & Sound Design"
   ],
   longDescription: "Transform your raw footage into captivating visual stories. Our professional video editing services help you create high-quality content that drives engagement and communicates your message effectively across all platforms."
-}
+},
+  {
+    id: "photographs",
+    title: "Photographs",
+    description: "Professional photography services to capture your moments and brand perfectly.",
+    icon: "Camera",
+    features: [
+      "Corporate & Product Photography",
+      "Event Coverage",
+      "Portrait & Lifestyle Sessions",
+      "High-Resolution Editing",
+      "Quick Turnaround Time"
+    ],
+    longDescription: "Elevate your visual identity with our professional photography services. Whether it's showcasing your products, covering special events, or creating compelling corporate portraits, we capture high-quality images that tell your unique story."
+  }
 ];
 
 export const getServiceById = (id: string): Service | undefined => {
   return services.find(service => service.id === id);
 };
-

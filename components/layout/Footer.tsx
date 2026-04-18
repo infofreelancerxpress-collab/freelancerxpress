@@ -30,6 +30,7 @@ const services = [
   { name: "Email Marketing", href: "/services#email-marketing" },
   { name: "Social Media", href: "/services#social-media-marketing" },
   { name: "Video Editing", href: "/services#video-editing" },
+  { name: "Photographs", href: "/services#photographs" },
 ];
 
 const socialLinks = [
