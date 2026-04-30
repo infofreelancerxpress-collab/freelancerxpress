@@ -30,6 +30,14 @@ export function TawkToWidget() {
         window.Tawk_API = window.Tawk_API || {};
         window.Tawk_LoadStart = new Date();
 
+        // Force the default widget to be at the bottom right, just in case it overrides hideWidget
+        window.Tawk_API.customStyle = {
+            visibility: {
+                desktop: { position: 'br', xOffset: 20, yOffset: 20 },
+                mobile: { position: 'br', xOffset: 20, yOffset: 20 }
+            }
+        };
+
         window.Tawk_API.onLoad = function () {
             window.Tawk_API.hideWidget();
             setIsLoaded(true);
