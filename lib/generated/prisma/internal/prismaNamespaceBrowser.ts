@@ -55,7 +55,11 @@ export const ModelName = {
   Admin: 'Admin',
   Service: 'Service',
   Offer: 'Offer',
-  OfferService: 'OfferService'
+  OfferService: 'OfferService',
+  Influencer: 'Influencer',
+  Inquiry: 'Inquiry',
+  Visitor: 'Visitor',
+  GalleryItem: 'GalleryItem'
 } as const
 
 export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -137,12 +141,82 @@ export const OfferServiceScalarFieldEnum = {
 export type OfferServiceScalarFieldEnum = (typeof OfferServiceScalarFieldEnum)[keyof typeof OfferServiceScalarFieldEnum]
 
 
+export const InfluencerScalarFieldEnum = {
+  id: 'id',
+  name: 'name',
+  username: 'username',
+  email: 'email',
+  profilePhoto: 'profilePhoto',
+  category: 'category',
+  location: 'location',
+  bio: 'bio',
+  tags: 'tags',
+  priceRange: 'priceRange',
+  experienceLevel: 'experienceLevel',
+  verified: 'verified',
+  engagementRate: 'engagementRate',
+  platforms: 'platforms',
+  portfolio: 'portfolio',
+  totalFollowers: 'totalFollowers',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type InfluencerScalarFieldEnum = (typeof InfluencerScalarFieldEnum)[keyof typeof InfluencerScalarFieldEnum]
+
+
+export const InquiryScalarFieldEnum = {
+  id: 'id',
+  name: 'name',
+  email: 'email',
+  message: 'message',
+  influencerId: 'influencerId',
+  status: 'status',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type InquiryScalarFieldEnum = (typeof InquiryScalarFieldEnum)[keyof typeof InquiryScalarFieldEnum]
+
+
+export const VisitorScalarFieldEnum = {
+  id: 'id',
+  ipHash: 'ipHash',
+  userAgent: 'userAgent',
+  path: 'path',
+  visitedAt: 'visitedAt'
+} as const
+
+export type VisitorScalarFieldEnum = (typeof VisitorScalarFieldEnum)[keyof typeof VisitorScalarFieldEnum]
+
+
+export const GalleryItemScalarFieldEnum = {
+  id: 'id',
+  title: 'title',
+  description: 'description',
+  category: 'category',
+  imageUrl: 'imageUrl',
+  link: 'link',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type GalleryItemScalarFieldEnum = (typeof GalleryItemScalarFieldEnum)[keyof typeof GalleryItemScalarFieldEnum]
+
+
 export const SortOrder = {
   asc: 'asc',
   desc: 'desc'
 } as const
 
 export type SortOrder = (typeof SortOrder)[keyof typeof SortOrder]
+
+
+export const JsonNullValueInput = {
+  JsonNull: JsonNull
+} as const
+
+export type JsonNullValueInput = (typeof JsonNullValueInput)[keyof typeof JsonNullValueInput]
 
 
 export const QueryMode = {
@@ -159,4 +233,13 @@ export const NullsOrder = {
 } as const
 
 export type NullsOrder = (typeof NullsOrder)[keyof typeof NullsOrder]
+
+
+export const JsonNullValueFilter = {
+  DbNull: DbNull,
+  JsonNull: JsonNull,
+  AnyNull: AnyNull
+} as const
+
+export type JsonNullValueFilter = (typeof JsonNullValueFilter)[keyof typeof JsonNullValueFilter]
 

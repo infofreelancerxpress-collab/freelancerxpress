@@ -62,3 +62,72 @@ model OfferService {
 
   @@id([offerId, serviceId])
 }
+
+model Influencer {
+  id              String    @id @default(cuid())
+  name            String
+  username        String    @unique
+  email           String    @unique
+  profilePhoto    String
+  category        String
+  location        String
+  bio             String
+  tags            String[]
+  priceRange      String
+  experienceLevel String
+  verified        Boolean   @default(false)
+  engagementRate  Float
+  platforms       Json
+  portfolio       Json      @default("[]")
+  totalFollowers  Int       @default(0)
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+  inquiries       Inquiry[]
+
+  @@index([category])
+  @@index([experienceLevel])
+  @@index([totalFollowers])
+  @@index([engagementRate])
+  @@index([verified])
+}
+
+model Inquiry {
+  id           String     @id @default(cuid())
+  name         String
+  email        String
+  message      String
+  influencerId String
+  influencer   Influencer @relation(fields: [influencerId], references: [id], onDelete: Cascade)
+  status       String     @default("pending")
+  createdAt    DateTime   @default(now())
+  updatedAt    DateTime   @updatedAt
+
+  @@index([influencerId])
+  @@index([status])
+}
+
+model Visitor {
+  id        String   @id @default(cuid())
+  ipHash    String
+  userAgent String
+  path      String   @default("/")
+  visitedAt DateTime @default(now())
+
+  @@index([visitedAt])
+  @@index([ipHash])
+  @@index([ipHash, visitedAt])
+}
+
+model GalleryItem {
+  id          String   @id @default(cuid())
+  title       String
+  description String?
+  category    String
+  imageUrl    String
+  link        String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([category])
+  @@index([createdAt])
+}

@@ -62,7 +62,6 @@ export function ImageUpload({ value, onChange, disabled }: ImageUploadProps) {
 
     return (
         <div className="flex flex-col gap-4">
-            <Label>Profile Image</Label>
             {preview ? (
                 <div className="relative aspect-square w-32 h-32 rounded-lg overflow-hidden border">
                     <Image

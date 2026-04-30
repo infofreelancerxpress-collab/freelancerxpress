@@ -42,3 +42,23 @@ export type Offer = Prisma.OfferModel
  * 
  */
 export type OfferService = Prisma.OfferServiceModel
+/**
+ * Model Influencer
+ * 
+ */
+export type Influencer = Prisma.InfluencerModel
+/**
+ * Model Inquiry
+ * 
+ */
+export type Inquiry = Prisma.InquiryModel
+/**
+ * Model Visitor
+ * 
+ */
+export type Visitor = Prisma.VisitorModel
+/**
+ * Model GalleryItem
+ * 
+ */
+export type GalleryItem = Prisma.GalleryItemModel

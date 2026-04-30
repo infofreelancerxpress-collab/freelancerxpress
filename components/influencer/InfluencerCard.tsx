@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Users, BarChart2, CheckCircle, ExternalLink } from "lucide-react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 interface InfluencerCardProps {
     influencer: Influencer;
@@ -23,11 +24,11 @@ export function InfluencerCard({ influencer }: InfluencerCardProps) {
             transition={{ duration: 0.3 }}
         >
             <Card className="overflow-hidden h-full flex flex-col hover:shadow-xl transition-shadow border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950">
-                <div className="relative h-48 w-full overflow-hidden">
+                <div className="relative h-64 w-full overflow-hidden">
                     <img
                         src={influencer.image}
                         alt={influencer.name}
-                        className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                        className="w-full h-full object-cover object-center transition-transform duration-500 hover:scale-105"
                     />
                     <div className="absolute top-3 right-3 flex gap-2">
                         {influencer.verified && (

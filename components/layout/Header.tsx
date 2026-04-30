@@ -31,6 +31,7 @@ export function Header() {
     { name: "About", link: "/about" },
     { name: "Team", link: "/team" },
     { name: "Influencer", link: "/influencer-marketing" },
+    { name: "Gallery", link: "/gallery" },
     { name: "Contact", link: "/contact" },
   ];
 

@@ -1,77 +1,98 @@
 <div align="center">
-  
-# 🚀 FreelancerXpress
-
-**Modern Digital Marketing & Freelance Services Platform**
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Next.js-16.1.1-black?style=for-the-badge&logo=next.js" alt="Next.js" />
-  <img src="https://img.shields.io/badge/React-19.2.3-blue?style=for-the-badge&logo=react" alt="React" />
-  <img src="https://img.shields.io/badge/Tailwind-CSS_4-38B2AC?style=for-the-badge&logo=tailwind-css" alt="Tailwind" />
-  <img src="https://img.shields.io/badge/Prisma-ORM-2D3748?style=for-the-badge&logo=prisma" alt="Prisma" />
-  <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript" alt="TypeScript" />
-</p>
-
-[FreelancerXpress](#) is a premium, high-performance web application designed to connect clients with skilled professionals for various digital services. It features a complete marketing ecosystem, dynamic user interfaces, and an optimized conversion funnel.
-
+  <br />
+  <h1>🚀 FreelancerXpress</h1>
+  <p>
+    <strong>A Premium Digital Marketing & Freelancer Services Platform</strong>
+  </p>
+  <p>
+    <a href="https://nextjs.org/"><img src="https://img.shields.io/badge/Next.js-16.1.1-black?style=for-the-badge&logo=next.js" alt="Next.js" /></a>
+    <a href="https://react.dev/"><img src="https://img.shields.io/badge/React-19.2.3-blue?style=for-the-badge&logo=react" alt="React" /></a>
+    <a href="https://tailwindcss.com/"><img src="https://img.shields.io/badge/Tailwind_CSS_4-38B2AC?style=for-the-badge&logo=tailwind-css" alt="Tailwind CSS" /></a>
+    <a href="https://www.prisma.io/"><img src="https://img.shields.io/badge/Prisma_ORM-2D3748?style=for-the-badge&logo=prisma" alt="Prisma" /></a>
+    <a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript" alt="TypeScript" /></a>
+  </p>
+  <br />
 </div>
+
+## 📖 About The Project
+
+**FreelancerXpress** is a high-performance, modern web application designed to seamlessly connect clients with skilled professionals across various digital marketing services. Built with the latest web technologies, it features a complete digital ecosystem ranging from dynamic promotional offers to a fully integrated Influencer Marketplace.
+
+The application leverages the power of Next.js App Router for optimal Server-Side Rendering (SSR) and SEO performance, accompanied by a beautifully crafted, highly interactive UI utilizing Tailwind CSS v4, Framer Motion, and Radix UI primitives.
 
 ---
 
-## ✨ Features
+## ✨ Key Features
 
-- **Dynamic Promotional Offers:** Smart, session-aware UI popups utilizing glassmorphism and modern gradient animations.
-- **Premium User Interface:** Tailored utilizing Radix UI primitives and complex Framer Motion animations for fluid transitions.
-- **Comprehensive Service Catalog:** Explore services ranging from SEO and Web Design to highly-targeted Influencer Marketing.
-- **Dark Mode Optimization:** Fully integrated, CSS-variable driven light/dark modes that maintain high contrast and aesthetics.
-- **Robust Database Architecture:** Leveraging PostgreSQL with Prisma ORM for type-safe database queries.
-- **Fast & Scalable:** Built on Next.js App Router and Turbopack for near-instant rendering and hydration.
+- **🛍️ Influencer Marketplace**: A dedicated, searchable marketplace for clients to discover and inquire about top-tier digital influencers. Filter by engagement, platform, and niche.
+- **📊 Admin Dashboard**: A comprehensive, secure admin panel to manage influencers, track platform analytics, view inquiries, and manage promotional offers in real-time.
+- **🎁 Dynamic Promotional Offers**: Smart, scheduled UI popups utilizing glassmorphism and modern gradient animations to boost conversion rates.
+- **🎨 Premium User Interface**: Tailored components using Radix UI and complex Framer Motion animations to ensure fluid transitions and an incredible UX.
+- **🌗 Dark Mode Optimization**: Fully integrated, CSS-variable driven light and dark modes that maintain high contrast and aesthetic appeal.
+- **🔒 Secure Architecture**: Robust authentication system built on Next-Auth (v5) with secure API routes and Server Actions.
+- **📈 Built-in Analytics**: Custom analytics tracking for unique visitors and page views directly integrated into the admin dashboard.
+
+---
 
 ## 🛠️ Technology Stack
 
-### Core
-- **Framework:** [Next.js (App Router)](https://nextjs.org/)
-- **Language:** [TypeScript](https://www.typescriptlang.org/)
-- **Styling:** [Tailwind CSS v4](https://tailwindcss.com/)
-- **Animations:** [Framer Motion](https://www.framer.com/motion/)
+This project is built on the shoulders of modern, bleeding-edge web technologies:
 
-### Dependencies & Integrations
-- **Database:** PostgreSQL on Neon DB
-- **ORM:** Prisma Studio
-- **Authentication:** Next-Auth (v5 Beta)
-- **UI Architecture:** Radix UI primitives, Lucide Icons, Shadcn-like components
-- **Media Management:** ImageKit
-- **Mailing Services:** Nodemailer
+### Core Frameworks
+- **[Next.js 16](https://nextjs.org/)** - React framework for production (App Router + Turbopack)
+- **[React 19](https://react.dev/)** - Core frontend library
+- **[TypeScript](https://www.typescriptlang.org/)** - Static typing for scalable codebases
+
+### Styling & UI
+- **[Tailwind CSS v4](https://tailwindcss.com/)** - Utility-first CSS framework
+- **[Framer Motion](https://www.framer.com/motion/)** - Production-ready animation library
+- **[Radix UI](https://www.radix-ui.com/)** - Unstyled, accessible UI components
+- **[Lucide React](https://lucide.dev/)** - Beautiful & consistent icons
+
+### Backend & Database
+- **[Prisma ORM](https://www.prisma.io/)** - Next-generation Node.js and TypeScript ORM
+- **[PostgreSQL](https://www.postgresql.org/)** - Powerful, open-source object-relational database system
+- **[NextAuth.js (v5)](https://next-auth.js.org/)** - Complete open-source authentication
+
+### Additional Tools
+- **Zod & React Hook Form** - Type-safe schema validation and form state management
+- **ImageKit** - Real-time image optimization and media management
+- **Nodemailer** - Robust email delivery system for inquiries and notifications
 
 ---
 
-## 📂 Project Structure
+## 📂 Project Architecture
 
 ```text
 freelancerxpress/
-├── app/                  # Next.js App Router structural files (pages, API routes, layout)
-├── components/           # Modular React components
-│   ├── home/             # Landing page components (Popups, Testimonials, etc.)
-│   ├── layout/           # Global Headers, Footers, navigation
-│   ├── contact/          # Forms, FAQ Accordions
-│   └── ui/               # Reusable base logic (Radix UI implementations)
-├── data/                 # Constant datasets (e.g. FAQ structures, placeholder strings)
-├── prisma/               # Database schemas and seed files
-└── public/               # Public assets and icons
+├── app/                        # Next.js App Router files
+│   ├── (main)/                 # Public-facing routes (Home, About, Services)
+│   ├── api/                    # Secure RESTful API endpoints
+│   ├── dashboard/              # Protected Admin Dashboard routes
+│   └── influencer-marketing/   # Dedicated influencer marketplace
+├── components/                 # Modular, reusable React components
+│   ├── admin/                  # Dashboard-specific components
+│   ├── influencer/             # Marketplace components
+│   └── ui/                     # Base UI elements (Buttons, Inputs, Dialogs)
+├── lib/                        # Utility functions, Prisma client, and configurations
+├── prisma/                     # Database schema models and migrations
+├── public/                     # Static assets and media
+└── types/                      # Global TypeScript definitions
 ```
 
 ---
 
 ## 🚀 Getting Started
 
-Follow these instructions to set up the project locally.
+Follow these instructions to set up the project locally on your machine.
 
 ### Prerequisites
 
-Ensure you have the following installed:
-- **Node.js** (v18 or higher)
-- **Bun** package manager
-- **Git**
+Ensure you have the following installed on your local environment:
+- **[Node.js](https://nodejs.org/)** (v18 or higher)
+- **[Bun](https://bun.sh/)** (Highly recommended for package management and script execution)
+- **[Git](https://git-scm.com/)**
+- A running instance of **PostgreSQL** (Local or Cloud, e.g., Neon, Supabase)
 
 ### Installation Steps
 
@@ -82,59 +103,44 @@ Ensure you have the following installed:
    ```
 
 2. **Install dependencies:**
-   Using Bun is highly recommended for faster resolution:
+   Using Bun is highly recommended for faster module resolution:
    ```bash
    bun install
    ```
 
 3. **Environment Setup:**
-   Create a `.env` file in the root configuration by copying `.env.example`:
+   Create a `.env` file in the root directory by copying `.env.example`:
    ```bash
    cp .env.example .env
    ```
-   **Required variables:**
-   ```env
-   # Database Configuration
-   DATABASE_URL="postgresql://[user]:[password]@[host]/[dbname]"
-
-   # Next-Auth Secret
-   AUTH_SECRET="your-secret-here"
-   
-   # Mailing System Credentials
-   EMAIL_USER="your-email@gmail.com"
-   EMAIL_PASS="your-app-password"
-
-   # ImageKit Integration
-   NEXT_PUBLIC_IMAGEKIT_PUBLIC_KEY="public_..."
-   IMAGEKIT_PRIVATE_KEY="private_..."
-   NEXT_PUBLIC_IMAGEKIT_URL_ENDPOINT="https://ik.imagekit.io/..."
-   ```
+   *Make sure to configure the required variables, including your Database URL, NextAuth secret, and API keys for ImageKit and email services.*
 
 4. **Initialize Database:**
-   Push the Prisma schema to your remote/local PostgreSQL database:
+   Generate the Prisma Client and push the schema to your PostgreSQL database:
    ```bash
    bunx prisma generate
    bunx prisma db push
    ```
+   *(Optional)* If you have seed data, you can run: `bun run prisma:seed`
 
 5. **Start the Development Server:**
+   Launch the app using Turbopack for lightning-fast HMR:
    ```bash
    bun run dev
    ```
-
-   The platform should now be running at `http://localhost:3000`.
-
----
-
-## 🎨 UI/UX Philosophy
-
-FreelancerXpress is built with intense attention to visual details:
-- **Glassmorphism:** Strategic use of blurred components and gradient overlays for a premium feel.
-- **Accented Shimmering:** Use of HTML `<style>` tags to inject tailored CSS `@keyframes`, establishing organic fluid movement in promotional badges.
-- **Hydration Safe:** Utilizing specific React `useEffect` and module-pattern mounting logic to provide exactly zero UI-flash during client-side hydration.
+   The platform should now be running locally at `http://localhost:3000`.
 
 ---
 
-## 📝 License
+## 🎨 Design Philosophy
 
-This project is proprietary and confidential. Unauthorized copying of these files, via any medium, is strictly prohibited. 
+FreelancerXpress is built with intense attention to visual detail and user experience:
+- **Glassmorphism:** Strategic use of blurred components and gradient overlays for a premium, modern feel.
+- **Fluid Interactions:** Tailored micro-animations on hover states, page transitions, and data loading sequences.
+- **Performance First:** Utilizing React Server Components (RSC) to minimize client-side JavaScript, ensuring lightning-fast load times and seamless hydration.
+
+---
+
+## 🛡️ License & Legal
+
+This project is proprietary and confidential. Unauthorized copying, distribution, or modification of these files, via any medium, is strictly prohibited unless explicitly authorized by the repository owner.

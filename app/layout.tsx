@@ -6,6 +6,7 @@ import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import { LayoutWrapper } from "@/components/layout/LayoutWrapper";
 import { Toaster } from "@/components/ui/sonner";
 import { TawkToWidget } from "@/components/TawkToWidget";
+import { VisitorTracker } from "@/components/analytics/VisitorTracker";
 
 
 const inter = Inter({
@@ -58,6 +59,8 @@ export default function RootLayout({
 
         {/* Tawk.to Live Chat */}
         <TawkToWidget />
+        {/* Visitor Analytics Tracker */}
+        <VisitorTracker />
       </body>
     </html>
   );

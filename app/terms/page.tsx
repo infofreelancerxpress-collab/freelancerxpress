@@ -63,7 +63,7 @@ export default function TermsAndConditionsPage() {
                 </h2>
                 <p className="text-muted-foreground leading-relaxed">
                   We provide modern, responsive and user-friendly website design
-                  and development services as per the client's needs. The client
+                  and development services as per the client&apos;s needs. The client
                   must provide the required content and information before
                   starting the work.
                 </p>
