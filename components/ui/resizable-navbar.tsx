@@ -242,7 +242,7 @@ export const NavbarLogo = () => {
         <Image src="/logo.png" alt="Logo" width={20} height={20} />
       </div> */}
       {/* <span className="font-bold text-lg gradient-text">FreelancerXpress</span> */}
-      <Image className="mix-blend-screen dark:mix-blend-screen" src="/logo.png" alt="Logo" width={100} height={100} />
+      <Image className="mix-blend-screen dark:mix-blend-screen" src="/logo.png" alt="Logo" width={50} height={50} />
     </Link>
   );
 };
