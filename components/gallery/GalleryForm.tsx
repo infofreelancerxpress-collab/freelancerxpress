@@ -12,6 +12,8 @@ import { toast } from "sonner";
 import { Loader2, Save, ArrowLeft } from "lucide-react";
 import Link from "next/link";
 
+import { ImageUpload } from "@/components/shared/ImageUpload";
+
 const galleryFormSchema = z.object({
   title: z.string().min(1, "Title is required"),
   description: z.string().optional(),
@@ -142,12 +144,10 @@ export function GalleryForm({ mode, initialData }: GalleryFormProps) {
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="imageUrl">Image URL</Label>
-            <Input
-              id="imageUrl"
-              placeholder="https://example.com/image.jpg"
-              value={imageUrl}
-              onChange={(e) => setImageUrl(e.target.value)}
+            <Label>Image</Label>
+            <ImageUpload 
+              value={imageUrl} 
+              onChange={(value) => setImageUrl(value)} 
             />
             {errors.imageUrl && (
               <p className="text-xs text-destructive">{errors.imageUrl}</p>

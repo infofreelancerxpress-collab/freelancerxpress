@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import prisma from '@/lib/prisma';
+import imagekit from '@/lib/imagekit';
 import { z } from 'zod';
 
 const gallerySchema = z.object({
@@ -9,6 +10,35 @@ const gallerySchema = z.object({
   imageUrl: z.string().url('Must be a valid URL'),
   link: z.string().url('Must be a valid URL').optional().or(z.literal('')),
 });
+
+const IMAGEKIT_URL_PREFIX = process.env.NEXT_PUBLIC_IMAGEKIT_URL_ENDPOINT || 'https://ik.imagekit.io';
+
+/**
+ * Download an image from a URL and upload it to ImageKit.
+ * Returns the permanent ImageKit URL.
+ */
+async function uploadImageFromUrl(sourceUrl: string, title: string): Promise<string> {
+  const response = await fetch(sourceUrl);
+  if (!response.ok) {
+    throw new Error(`Failed to download image from URL: ${response.statusText}`);
+  }
+
+  const arrayBuffer = await response.arrayBuffer();
+  const buffer = Buffer.from(arrayBuffer);
+
+  const urlPath = new URL(sourceUrl).pathname;
+  const extension = urlPath.split('.').pop()?.split('?')[0] || 'jpg';
+  const sanitizedTitle = title.replace(/[^a-zA-Z0-9-_]/g, '_').slice(0, 50);
+  const fileName = `gallery_${sanitizedTitle}_${Date.now()}.${extension}`;
+
+  const uploadResponse = await imagekit.files.upload({
+    file: buffer.toString('base64'),
+    fileName,
+    folder: '/gallery',
+  });
+
+  return uploadResponse.url as string;
+}
 
 export async function GET(
   request: Request,
@@ -40,13 +70,19 @@ export async function PUT(
     const json = await request.json();
     const body = gallerySchema.parse(json);
 
+    // Only re-upload if the URL is not already an ImageKit URL
+    let finalImageUrl = body.imageUrl;
+    if (!body.imageUrl.startsWith(IMAGEKIT_URL_PREFIX)) {
+      finalImageUrl = await uploadImageFromUrl(body.imageUrl, body.title);
+    }
+
     const item = await prisma.galleryItem.update({
       where: { id: resolvedParams.id },
       data: {
         title: body.title,
         description: body.description,
         category: body.category,
-        imageUrl: body.imageUrl,
+        imageUrl: finalImageUrl,
         link: body.link || null,
       },
     });

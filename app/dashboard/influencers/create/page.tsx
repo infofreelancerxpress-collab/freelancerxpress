@@ -12,7 +12,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { ArrowLeft, Plus, X, Loader2 } from "lucide-react";
 import { toast } from "sonner";
 import Link from "next/link";
-import { ImageUpload } from "@/components/team/image-upload";
+import { ImageUpload } from "@/components/shared/ImageUpload";
 
 const CATEGORIES = ["Fashion & Lifestyle","Tech & Gadgets","Fitness & Health","Food & Dining","Business & Entrepreneurship","Travel & Adventure","Gaming","Beauty & Makeup","Parenting & Family"];
 const EXPERIENCE_LEVELS = ["Nano", "Micro", "Macro", "Mega"];

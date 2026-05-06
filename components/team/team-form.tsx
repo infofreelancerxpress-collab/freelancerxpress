@@ -16,7 +16,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
-import { ImageUpload } from "./image-upload";
+import { ImageUpload } from "@/components/shared/ImageUpload";
 import { useEffect } from "react";
 import { TeamMember } from "@/lib/generated/prisma/client";
 import { createTeamMember, updateTeamMember } from "@/app/actions/team";
